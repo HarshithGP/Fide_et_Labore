@@ -16,7 +16,6 @@ const User = require("../../models/User.js");
 // @route           GET api/users/register
 // @description     Register a new user
 // @access          Public
-// router.get("/test", (req, res) => res.json({ msg: "Users Works" }));
 
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
@@ -123,4 +122,5 @@ router.get(
   }
 );
 
+router.get("/test", (req, res) => res.json({ msg: "Users Works" }));
 module.exports = router;

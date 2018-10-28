@@ -19,10 +19,6 @@ module.exports = function validateLoginInput(data) {
     errors.password = "Password is Required";
   }
 
-  if (Validator.isLength(data.password, { min: 9, max: 30 })) {
-    errors.password = "Password must be between 9 and 30 characters";
-  }
-
   return {
     errors,
     isValid: isEmpty(errors)
